@@ -1,6 +1,4 @@
-import transport.Bus;
-import transport.Passenger;
-import transport.Trucks;
+import transport.*;
 
 public class Main {
     public static void main(String[] args) {
@@ -19,10 +17,12 @@ public class Main {
         Bus MAZ3 = new Bus("MAZ", "206", 12);
         Bus MAZ4 = new Bus("MAZ", "207", 12.5);
 
-        ps1.pitStop();
+        DriverB<Passenger> ivanov_ivan = new DriverB<>("Ivanov Ivan");
+        ivanov_ivan.start(ps1);
+        DriverC<Trucks> semenov_semen = new DriverC<>("Semenov Semen");
+        semenov_semen.start(tr1);
+        DriverD<Bus> sergeev_sergey = new DriverD<>("Sergeev Sergey");
+        sergeev_sergey.start(MAZ1);
 
-        tr1.bestLapTime();
-
-        MAZ1.maximumSpeed();
     }
 }
