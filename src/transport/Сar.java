@@ -1,12 +1,12 @@
 package transport;
 
-public class Passenger extends Transport implements Competing{
+public class Сar extends Transport{
     @Override
     public String toString() {
         return "Модель " + getBrand() + " " + getModel() + ", Обьем двигателя - " + getEngineVolume();
     }
 
-    public Passenger(String brand, String model, double engineVolume) {
+    public Сar(String brand, String model, double engineVolume) {
         super(brand, model, engineVolume);
 
     }

@@ -1,6 +1,6 @@
 package transport;
 
-public class Bus extends Transport implements Competing{
+public class Bus extends Transport  {
     @Override
     public String toString() {
         return "Модель " + getBrand() + " " + getModel() + ", Обьем двигателя - " + getEngineVolume();

@@ -1,6 +1,6 @@
-import transport.Passenger;
+import transport.Сar;
 
-public class DriverB <B extends Passenger> {
+public class DriverB <B extends Сar> {
     private final String fio;
     private boolean driverLicense;
     private int experience;
@@ -13,8 +13,8 @@ public class DriverB <B extends Passenger> {
         }
     }
 
-    public void start(B passenger){
-        System.out.println("Водитель " + getFio() + " управляет автомобилем " + passenger.getBrand() + " " + passenger.getModel() +
+    public void start(B car){
+        System.out.println("Водитель " + getFio() + " управляет автомобилем " + car.getBrand() + " " + car.getModel() +
                 " и будет участвовать в заезде");
     }
 

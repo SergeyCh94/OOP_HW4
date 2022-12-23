@@ -2,10 +2,10 @@ import transport.*;
 
 public class Main {
     public static void main(String[] args) {
-        Passenger ps1 = new Passenger("Lada", "Vesta", 1.7);
-        Passenger ps2 = new Passenger("Audi", "A8", 3.0);
-        Passenger ps3 = new Passenger("Mazda", "RX8", 2.5);
-        Passenger ps4 = new Passenger("VW", "Polo Sedan", 1.6);
+        Сar ps1 = new Сar("Lada", "Vesta", 1.7);
+        Сar ps2 = new Сar("Audi", "A8", 3.0);
+        Сar ps3 = new Сar("Mazda", "RX8", 2.5);
+        Сar ps4 = new Сar("VW", "Polo Sedan", 1.6);
 
         Trucks tr1 = new Trucks("Volvo", "FH12", 13.0);
         Trucks tr2 = new Trucks("Scania", "FH12", 14.5);
@@ -17,7 +17,7 @@ public class Main {
         Bus MAZ3 = new Bus("MAZ", "206", 12);
         Bus MAZ4 = new Bus("MAZ", "207", 12.5);
 
-        DriverB<Passenger> ivanov_ivan = new DriverB<>("Ivanov Ivan");
+        DriverB<Сar> ivanov_ivan = new DriverB<>("Ivanov Ivan");
         ivanov_ivan.start(ps1);
         DriverC<Trucks> semenov_semen = new DriverC<>("Semenov Semen");
         semenov_semen.start(tr1);
