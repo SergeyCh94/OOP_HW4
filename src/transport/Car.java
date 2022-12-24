@@ -1,14 +1,15 @@
 package transport;
 
-import driver.DriverC;
+import driver.DriverB;
 
-public class Trucks extends Transport <DriverC>{
+public class Car extends Transport <DriverB>{
     @Override
     public String toString() {
         return "Модель " + getBrand() + " " + getModel() + ", Обьем двигателя - " + getEngineVolume();
     }
 
-    public Trucks(String brand, String model, double engineVolume) {
+    public Car(String brand, String model, double engineVolume) {
         super(brand, model, engineVolume);
+
     }
 }

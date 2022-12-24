@@ -1,29 +1,21 @@
-import transport.Bus;
+package driver;
 
-public class DriverD <D extends Bus> {
+public class Driver {
     private final String fio;
     private boolean driverLicense;
     private int experience;
 
-    public DriverD(String fio) {
+    @Override
+    public String toString() {
+        return fio;
+    }
+
+    public Driver (String fio) {
         if (fio == null || fio.isEmpty() || fio.isBlank()){
             this.fio = "default";
         } else {
             this.fio = fio;
         }
-    }
-
-    public void start(D bus){
-        System.out.println("Водитель " + getFio() + " управляет автомобилем " + bus.getBrand() + " " + bus.getModel() +
-                " и будет участвовать в заезде");
-    }
-
-    public void stop(){
-
-    }
-
-    public void refuelCar(){
-
     }
 
     public String getFio() {

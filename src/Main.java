@@ -1,11 +1,14 @@
+import driver.DriverB;
+import driver.DriverC;
+import driver.DriverD;
 import transport.*;
 
 public class Main {
     public static void main(String[] args) {
-        Сar ps1 = new Сar("Lada", "Vesta", 1.7);
-        Сar ps2 = new Сar("Audi", "A8", 3.0);
-        Сar ps3 = new Сar("Mazda", "RX8", 2.5);
-        Сar ps4 = new Сar("VW", "Polo Sedan", 1.6);
+        Car ps1 = new Car("Lada", "Vesta", 1.7);
+        Car ps2 = new Car("Audi", "A8", 3.0);
+        Car ps3 = new Car("Mazda", "RX8", 2.5);
+        Car ps4 = new Car("VW", "Polo Sedan", 1.6);
 
         Trucks tr1 = new Trucks("Volvo", "FH12", 13.0);
         Trucks tr2 = new Trucks("Scania", "FH12", 14.5);
@@ -17,12 +20,12 @@ public class Main {
         Bus MAZ3 = new Bus("MAZ", "206", 12);
         Bus MAZ4 = new Bus("MAZ", "207", 12.5);
 
-        DriverB<Сar> ivanov_ivan = new DriverB<>("Ivanov Ivan");
-        ivanov_ivan.start(ps1);
-        DriverC<Trucks> semenov_semen = new DriverC<>("Semenov Semen");
-        semenov_semen.start(tr1);
-        DriverD<Bus> sergeev_sergey = new DriverD<>("Sergeev Sergey");
-        sergeev_sergey.start(MAZ1);
+        DriverB ivan = new DriverB("Ivan");
+        DriverC sergey = new DriverC("Sergey");
+        DriverD semen = new DriverD("Semen");
 
+        ps1.start(ivan);
+        tr1.start(sergey);
+        MAZ1.start(semen);
     }
 }
