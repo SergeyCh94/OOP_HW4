@@ -1,6 +1,6 @@
 package transport;
 
-public class Transport implements Competing{
+public class Transport <T> implements Competing{
     private final String brand;
     private final String model;
     private final double engineVolume;
@@ -24,9 +24,10 @@ public class Transport implements Competing{
             this.engineVolume = engineVolume;
         }
     }
+    public void start(T driver){
 
-    public void start(){
-
+        System.out.println("Водитель " + driver + " управляет автомобилем " +  getBrand() + " " + getModel() +
+                " и будет участвовать в заезде");
     }
 
     public void stop(){

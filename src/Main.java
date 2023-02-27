@@ -1,13 +1,14 @@
-import transport.Bus;
-import transport.Passenger;
-import transport.Trucks;
+import driver.DriverB;
+import driver.DriverC;
+import driver.DriverD;
+import transport.*;
 
 public class Main {
     public static void main(String[] args) {
-        Passenger ps1 = new Passenger("Lada", "Vesta", 1.7);
-        Passenger ps2 = new Passenger("Audi", "A8", 3.0);
-        Passenger ps3 = new Passenger("Mazda", "RX8", 2.5);
-        Passenger ps4 = new Passenger("VW", "Polo Sedan", 1.6);
+        Car ps1 = new Car("Lada", "Vesta", 1.7);
+        Car ps2 = new Car("Audi", "A8", 3.0);
+        Car ps3 = new Car("Mazda", "RX8", 2.5);
+        Car ps4 = new Car("VW", "Polo Sedan", 1.6);
 
         Trucks tr1 = new Trucks("Volvo", "FH12", 13.0);
         Trucks tr2 = new Trucks("Scania", "FH12", 14.5);
@@ -19,10 +20,12 @@ public class Main {
         Bus MAZ3 = new Bus("MAZ", "206", 12);
         Bus MAZ4 = new Bus("MAZ", "207", 12.5);
 
-        ps1.pitStop();
+        DriverB ivan = new DriverB("Ivan");
+        DriverC sergey = new DriverC("Sergey");
+        DriverD semen = new DriverD("Semen");
 
-        tr1.bestLapTime();
-
-        MAZ1.maximumSpeed();
+        ps1.start(ivan);
+        tr1.start(sergey);
+        MAZ1.start(semen);
     }
 }
