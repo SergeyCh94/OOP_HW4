@@ -18,5 +18,11 @@ public class Main {
         Bus MAZ2= new Bus("MAZ", "205", 11.5);
         Bus MAZ3 = new Bus("MAZ", "206", 12);
         Bus MAZ4 = new Bus("MAZ", "207", 12.5);
+
+        ps1.pitStop();
+
+        tr1.bestLapTime();
+
+        MAZ1.maximumSpeed();
     }
 }

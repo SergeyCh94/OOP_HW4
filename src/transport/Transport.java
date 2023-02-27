@@ -1,6 +1,6 @@
 package transport;
 
-public class Transport {
+public class Transport implements Competing{
     private final String brand;
     private final String model;
     private final double engineVolume;
@@ -33,6 +33,21 @@ public class Transport {
 
     }
 
+    @Override
+    public void pitStop() {
+        System.out.println("Авто " + getBrand() + " " + getModel() + " на пит стопе");
+    }
+
+    @Override
+    public void bestLapTime() {
+        System.out.println("Лучшее время круга " + getBrand() + " " + getModel());
+    }
+
+    @Override
+    public void maximumSpeed() {
+        System.out.println("Максимальная скорость " + getBrand() + " " + getModel());
+    }
+
     public String getBrand() {
         return brand;
     }
@@ -44,4 +59,5 @@ public class Transport {
     public double getEngineVolume() {
         return engineVolume;
     }
+
 }
